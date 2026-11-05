@@ -8,11 +8,11 @@ if (NOT DEFINED ENV{GEODE_SDK})
     message(FATAL_ERROR "Unable to find Geode SDK! Define GEODE_SDK.")
 endif()
 
-# Geode 6.0.0-alpha.1 ships with 2.2091 bindings. GD 2.2092 is a
-# point update; expose the requested target version to the SDK's
-# compatibility check while retaining the alpha.1 SDK and bindings.
-set(GEODE_GD_VERSION "2.2092" CACHE INTERNAL "Geode GD Version" FORCE)
-set(GEODE_COMP_GD_VERSION "22092" CACHE INTERNAL "Geode Comparable GD Version" FORCE)
+# Geode 6.0.0-alpha.1 only provides bindings for GD 2.2091.
+# Use that supported bindings set; mod.json uses "*" so Geode's
+# package validator does not falsely label these as 2.2092-specific.
+set(GEODE_GD_VERSION "2.2091" CACHE INTERNAL "Geode GD Version" FORCE)
+set(GEODE_COMP_GD_VERSION "22091" CACHE INTERNAL "Geode Comparable GD Version" FORCE)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/upstream/src/*.cpp")
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
