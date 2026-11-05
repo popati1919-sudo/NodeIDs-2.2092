@@ -1,0 +1,18 @@
+{
+    "geode": "6.0.0-alpha.1",
+    "gd": {
+        "win": "2.2092"
+    },
+    "version": "v1.23.4",
+    "id": "geode.node-ids",
+    "name": "Node IDs",
+    "developer": "Geode Team",
+    "description": "Standard node IDs to be used by other mods. Windows build for Geometry Dash 2.2092.",
+    "links": {
+        "source": "https://github.com/popati1919-sudo/NodeIDs-2.2092"
+    },
+    "issues": {
+        "url": "https://github.com/popati1919-sudo/NodeIDs-2.2092/issues",
+        "info": "Report issues related to node ID mismatches."
+    }
+}
